@@ -4,6 +4,9 @@ import java.io.File;
 
 /**
  * 编写程序，删除给定的文件或目录
+ *   1.只有当目录中全部文件删除掉之后才能删除目录
+ *   2.通过递归方式进入子目录
+ *   3.最后删除根目录
  */
 public class DeleteDirTest {
     public static void main(String[] args) {
@@ -17,7 +20,6 @@ public class DeleteDirTest {
             //1.获取目录中所有子项
             File[] subs = file.listFiles();
             //2.逐个删除子项
-
             for(int i=0;i<subs.length;i++){
                 /*
                    一个方法内部调用自己方法的现象称为：递归
@@ -30,20 +32,6 @@ public class DeleteDirTest {
             }
         }
         file.delete();
-    }
-
-    public void a(){
-        System.out.println("aaa");
-        b();
-        System.out.println("111");
-    }
-    public void b(){
-        System.out.println("bbb");
-        c();
-        System.out.println("ddd");
-    }
-    public void c(){
-        System.out.println("ccc");
     }
 
 
