@@ -16,7 +16,7 @@ public class AutoCloseDemo {
          */
         try(
                 FileOutputStream fos = new FileOutputStream("fos.txt");
-                ){
+        ){
             fos.write(1);
         }catch(IOException e){
             e.printStackTrace();
