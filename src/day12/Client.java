@@ -7,7 +7,9 @@ import java.util.Scanner;
 /**
  * 聊天室客户端
  */
-public class Client {
+public class
+
+Client {
     /*
       java.net.Socket 套接字
         Socket封装了底层TCP协议的通讯细节，使用它可以通过TCP协议与服务端建立连接。
